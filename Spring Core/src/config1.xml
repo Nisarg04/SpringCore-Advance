@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <bean id = "restaurantBean1" class = "constructorInjection.Restaurant1">
+    <constructor-arg ref = "greenTeaBean1"></constructor-arg>
+    <!-- Here ref indicates the bean id of the class whose 
+    method needs to be called -->
+    </bean>
+    
+    <bean id="teaBean1" class = "constructorInjection.Tea1">
+    </bean>
+    
+    <bean id ="greenTeaBean1" class = "constructorInjection.GreenTea1">
+    </bean>
+    
+    </beans>
